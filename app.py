@@ -1,7 +1,7 @@
 
 import streamlit as st
 from langchain_openai import ChatOpenAI
-from langchain.schema import HumanMessage, SystemMessage
+from langchain_core.messages import HumanMessage, SystemMessage
 import time
 import re
 
@@ -167,4 +167,5 @@ if st.button("⚡ Start Stress Simulation", key="start_sim_btn"):
 
                 if "BLOCKED" in log['agent'] or "LOOP DETECTED" in log['agent']:
                     st.warning("⚠️ Guardrail Intervention Triggered Here")
+
 
